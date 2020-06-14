@@ -47,6 +47,74 @@ namespace COREDemo.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "First Name")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Last Name")]
+            public string LastName { get; set; }
+
+            [Required]
+            [DataType(DataType.Date)]
+            [Display(Name = "Birth Date")]
+            public DateTime DOB { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Street Address")]
+            public string StreetAddress { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "City")]
+            public string City { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "State/Province")]
+            public string State { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "ZIP/Postal Code")]
+            public string ZipCode { get; set; }
+
+            [Phone]
+            [Display(Name = "Phone Number")]
+            public string PhoneNumber { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "SSN")]
+            public string SSN { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Insurance Company")]
+            public string InsCompany { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Insurance Policy #")]
+            public string InsPolicyNo { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Primary Doctor")]
+            public string Doctor { get; set; }
+
+            [Phone]
+            [DataType(DataType.Text)]
+            [Display(Name = "Primary Doctor Phone Number")]
+            public string DoctorPhone { get; set; }
+
+            [DataType(DataType.MultilineText)]
+            [Display(Name = "Additional Information")]
+            public string AdditionalInfo { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -75,7 +143,24 @@ namespace COREDemo.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new COREDemoUser { UserName = Input.Email, Email = Input.Email };
+                var user = new COREDemoUser {
+                    FirstName = Input.FirstName,
+                    LastName = Input.LastName,
+                    DOB = Input.DOB,
+                    StreetAddress = Input.StreetAddress,
+                    City = Input.City,
+                    State = Input.State,
+                    ZipCode = Input.ZipCode,
+                    PhoneNumber = Input.PhoneNumber,
+                    SSN = Input.SSN,
+                    InsCompany = Input.InsCompany,
+                    InsPolicyNo = Input.InsPolicyNo,
+                    Doctor = Input.Doctor,
+                    DoctorPhone = Input.DoctorPhone,
+                    AdditionalInfo = Input.AdditionalInfo,
+                    UserName = Input.Email,
+                    Email = Input.Email
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

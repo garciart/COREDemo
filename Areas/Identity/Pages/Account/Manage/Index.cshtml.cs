@@ -79,12 +79,12 @@ namespace COREDemo.Areas.Identity.Pages.Account.Manage
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "InsCompany")]
+            [Display(Name = "Insurance Company")]
             public string InsCompany { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "InsPolicyNo")]
+            [Display(Name = "Insurance Policy #")]
             public string InsPolicyNo { get; set; }
 
             [Required]
