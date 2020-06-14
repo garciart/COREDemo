@@ -1,0 +1,39 @@
+﻿@page
+@model COREDemo.Pages.AboutModel
+@{
+    ViewData["Title"] = "About the Virtual Letter of Life Project";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="~/img/sfd_logo.png" style="width:100%;" />
+            <br />
+            <img src="~/img/umgc_logo.png" style="width:100%;" />
+        </div>
+        <div class="col-sm-9">
+            <h1>@ViewData["Title"]</h1>
+            <p>On May 20, 2020, the Salisbury Fire Department published a Request For Proposal (RFP) through the City of Salisbury's GovQuote web portal. Team 3, SWEN 670 (Summer), at the University of Maryland, Global Campus (UMGC), responded to the proposal the next day.</p>
+            <p>The Salisbury Fire Department's <b>Business Problem</b> and <b>Desired Outcomes</b> were:</p>
+            <p>
+                <em>"We are searching for a system that will allow emergency medical services (EMS) to retrieve the medical information contained in a patient's <a href="https://salisbury.md/departments/fire/letter-of-life" title="Letter of Life">"Letter of Life"</a> at any location.</em>
+            </p>
+            <p>
+                <em>"In an emergency, the Letter of Life provides responders with a list of pertinent medical conditions and illnesses when the patient cannot provide this information on their own. We recommend all residents, especially the elderly and those suffering from chronic medical conditions, to complete a "Letter of Life" and place it in a location easily accessible by EMS personnel, such as on a refrigerator or by the entry door to the residence. However, when an emergency occurs outside the home, EMS personnel cannot access this list, which is why we are searching for an easily accessible, cloud-based version of the letter.</em>
+            </p>
+            <p>
+                <em>"Our desired outcomes are:</em>
+                <ul>
+                    <li><em>Provide EMS personnel access to a patient's Letter of Life information, from a laptop and mobile device, through a secure, but easily navigable interface.</em></li>
+                    <li><em>Allow EMS personnel to scan a barcode or quick response (QR) code, found on a non-electronic token, such as a card, a bracelet, or necklace, and retrieve Letter of Life information for non-responsive patients.</em></li>
+                    <li><em>Allow patients and authorized users to create, read, update, and delete records, from a desktop or laptop computer, through a secure, but easily navigable administration interface.</em></li>
+                    <li><em>Allow patients and authorized users to print Letters of Life or save them in portable data format (PDF).</em></li>
+                </ul>
+            </p>
+            <p>
+                This web site demonstrates how we satisfied the client's business problem and how we met each desired outcome.
+            </p>
+        </div>
+    </div>
+</div>
+
