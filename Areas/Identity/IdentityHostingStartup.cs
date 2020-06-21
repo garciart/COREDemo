@@ -17,7 +17,7 @@ namespace COREDemo.Areas.Identity
         {
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<COREDemoContext>(options =>
-                    options.UseSqlServer(
+                    options.UseSqlite(
                         context.Configuration.GetConnectionString("COREDemoContextConnection")));
 
                 services.AddDefaultIdentity<COREDemoUser>(options => options.SignIn.RequireConfirmedAccount = true)
